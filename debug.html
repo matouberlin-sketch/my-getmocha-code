@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug React App</title>
+    <script>
+        // Simple debugging script
+        console.log('Debug script loaded');
+        
+        window.addEventListener('load', () => {
+            console.log('Window loaded');
+            
+            // Check if React root element exists
+            const root = document.getElementById('root');
+            console.log('Root element:', root);
+            
+            // Check for any JavaScript errors
+            window.addEventListener('error', (e) => {
+                console.error('JavaScript error:', e.error);
+            });
+            
+            // Check for unhandled promise rejections
+            window.addEventListener('unhandledrejection', (e) => {
+                console.error('Unhandled promise rejection:', e.reason);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Debug Page</h1>
+    <p>Check the console for debugging information.</p>
+    <div id="test">Test div</div>
+</body>
+</html>
